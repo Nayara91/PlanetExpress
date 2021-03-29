@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta nome="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Classic - Contado</title>
+<!--
+Classic Template
+http://www.templatemo.com/tm-488-classic
+-->
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" href="css/templatemo-style.css">                                   <!-- Templatemo style -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+          <![endif]-->
+</head>
+
+    <body>
+       
+        <div class="tm-header">
+            <div class="container-fluid">
+                <div class="tm-header-inner">
+                    <a href="#" class="navbar-brand tm-site-nome">Planet Express</a>
+                    
+                    <!-- navbar -->
+                    <nav class="navbar tm-main-nav">
+
+                        <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#tmNavbar">
+                            &#9776;
+                        </button>
+                        
+                        <div class="collapse navbar-toggleable-sm" id="tmNavbar">
+                            <ul class="nav navbar-nav">
+                                <li class="nav-item">
+                                    <a href="index.html" class="nav-link">Início</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="sobre.html" class="nav-link">Sobre</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="temas.html" class="nav-link">Temas</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a href="contato.html" class="nav-link">Contato</a>
+                                </li>
+                                <li class="nav-item">
+                                        <a href="cadastro.html" class="nav-link">Cadastro</a>
+                                    </li>
+                            </ul>                        
+                        </div>
+                        
+                    </nav>  
+
+                </div>                                  
+            </div>            
+        </div>
+
+        <div class="tm-contato-img-container">
+            
+        </div>
+
+        <section class="tm-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+
+                        <section>
+                            <h3 class="tm-gold-text tm-form-title">Fale conosco</h3>
+                            <p class="tm-form-description">Fique à vontade para falar com a gente.
+                            Estamos a disposição para melhor atende-los. Críticas e elogios serão 
+                            bem vindos.</p> 
+
+
+                            <form action="index.html" method="post" class="tm-contato-form">                                
+                                <div class="form-group">
+                                    <input type="text" id="contato_nome" nome="contato_nome" class="form-control" placeholder="nome"  required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" id="contato_email" nome="contato_email" class="form-control" placeholder="Email"  required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="contato_assunto" nome="contato_assunto" class="form-control" placeholder="assunto"  required/>
+                                </div>
+                                <div class="form-group">
+                                    <textarea id="contato_mensagem" nome="contato_mensagem" class="form-control" rows="6" placeholder="mensagem" required></textarea>
+                                </div>
+                            
+                                <button type="submit" class="tm-btn">Enviar</button>                          
+                            </form>   
+                        </section>
+                        
+                        
+                <div class="row">
+                    <div class="col-xs-12 tm-copyright-col">
+                        <p class="tm-copyright-text">Copyright 2019 Planet Express</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- load JS files -->
+        <script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+        <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script> <!-- Tether for Bootstrap, http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h --> 
+        <script src="js/bootstrap.min.js"></script>                 <!-- Bootstrap (http://v4-alpha.getbootstrap.com/) -->
+        <script>     
+       
+            /* Google map
+            ------------------------------------------------*/
+            var map = '';
+            var center;
+
+            function initialize() {
+                var mapOptions = {
+                    zoom: 16,
+                    center: new google.maps.LatLng(13.758468,100.567481),
+                    scrollwheel: false
+                };
+            
+                map = new google.maps.Map(document.getElementById('google-map'),  mapOptions);
+
+                google.maps.event.addDomListener(map, 'idle', function() {
+                  calculateCenter();
+                });
+            
+                google.maps.event.addDomListener(window, 'resize', function() {
+                  map.setCenter(center);
+                });
+            }
+
+            function calculateCenter() {
+                center = map.getCenter();
+            }
+
+            
+        </script>             
+
+</body>
+</html>
